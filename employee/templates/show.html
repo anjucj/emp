@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>record</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Contact</th>
+				<th>Company</th>
+				<th>Action</th>
+		</thead>
+		<tbody>
+			{% for  employe in form %}
+			<tr>
+				<td>{{employe.eid}}</td>
+				<td>{{employe.ename}}</td>
+				<td>{{employe.email}}</td>
+				<td>{{employe.econtact}}</td>
+				<td>{{employe.ecompany}}</td>
+				<td>
+					<a href="/edit/{{ employe.id}}">Edit</a>
+					<a href="/delete/{{employe.id}}">Delete</a>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<br>
+	<br>
+	<!-- <a  href="emp">add</a> -->
+	<button><a href="/addEmployee/">Back</a></button>
+	
+</body>
+
+
+</html>
+
+

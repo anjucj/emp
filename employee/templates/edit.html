@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>titleS</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+</head>
+<body>
+<form action="" method="post" class="">
+
+	{% csrf_token %}
+	<div>
+		<br>
+		<p>
+			<h3> Update Details</h3>
+		</p>
+		<div>
+			<p>Employee Code </p>
+			<div>
+				{{forms.eid}}
+			</div>
+		</div>	
+		<div>
+			<p>Employee name </p>
+			<div>
+				{{forms.ename}}
+			</div>
+		</div>	
+		<div>
+			<p>Employee email </p>
+			<div>
+				{{forms.email}}
+			</div>
+		</div>	
+		<div>
+			<p>Employee contact </p>
+			<div>
+				{{forms.econtact}}
+			</div>
+		</div>	
+
+		<div>
+			<p>Employee company </p>
+			<div>
+				{{forms.ecompany}}
+			</div>
+		</div>	
+
+		
+		<div>
+			<br>
+			<button type="submit">Update</button>
+		</div>
+	</div>
+
+</form>
+
+</body>
+</html>
+
+
